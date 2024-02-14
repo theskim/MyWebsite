@@ -4,9 +4,9 @@ import { TrackTCImage } from '../../../../assets/ProjectImages';
 const TrackTC = () => {
     return (
         <Project
-            title="TrackTC"
+            title="TrackTC - Submission for NewHacks 2022"
             alt="TrackTC"
-            skills="React.js • styled-components • Express.js • Node.js • MongoDB • TTC API"
+            skills="React.js • Express.js • Node.js • MongoDB • TTC API"
             image={TrackTCImage}
             link="https://devpost.com/software/tracktc"
             github="https://github.com/skim1601/Enhanced-TrackTC"

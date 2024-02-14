@@ -26,7 +26,7 @@ const Description = () => {
       <p>
         <Icon icon="mdi:certificate" width='1.3rem'/>&nbsp;Minor in <b>Artificial Intelligence Engineering</b><br/>
         <b><Icon icon="tabler:award" width='1.3rem'/>&nbsp;NSERC</b> Undergraduate Student Research Award<br/>
-        <b><Icon icon="mdi:award" width='1.3rem'/>&nbsp;Dean's List</b> in All Semesters (<b>cGPA: 3.84</b>/4.0)<br/>
+        <b><Icon icon="mdi:award" width='1.3rem'/>&nbsp;Dean's List</b> in All Semesters<br/>
         <Icon icon="carbon:skill-level-basic" width='1.3rem'/>&nbsp;Courses focused in <b>ML/AI</b>, <b>Software Engineering</b>, <b>Computer Networks</b>, and <b>Control</b>
       </p>
       <a className="my-button" href="https://discover.engineering.utoronto.ca/programs/engineering-programs/electrical-computer-engineering/" style={

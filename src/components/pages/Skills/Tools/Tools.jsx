@@ -22,7 +22,7 @@ const ToolSection = ({ tools }) => {
     return (
         <>
             <div className="tool__section">    
-            <br/><br/>           
+                <br/><br/>           
                 {tools.map((tool, index) => (
                     <Tool key={index} location={tool.location} name={tool.name}/>
                 ))}
@@ -36,6 +36,7 @@ const Tools = () => {
         {location: <Icon icon="devicon-plain:c" width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)" />, name: "C"},
         {location:<Icon icon="simple-icons:cplusplus" width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)" />, name: "C++"},
         {location: <Icon icon="mdi:language-python"  width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)"/>, name: "Python"},
+        {location: <Icon icon="bxl:java"  width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)"/>, name: "Java"},
         {location: <Icon icon="mdi:language-rust"  width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)"/>, name: "Rust"},
         {location: <Icon icon="ion:logo-html5" width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)" />, name: "HTML5"},
         {location: <Icon icon="ion:logo-css3" width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)" />, name: "CSS3"},
@@ -51,6 +52,7 @@ const Tools = () => {
         {location: <Icon icon="ph:file-sql" width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)" />, name: "SQL"},
         {location: <Icon icon="tabler:brand-mysql" width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)" />, name: "MySQL"},
         {location: <Icon icon="bxl:postgresql" width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)" />, name: "PostgreSQL"},
+        {location:<Icon icon="simple-icons:pytorch" width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)" />, name: "PyTorch"},
         {location:<Icon icon="file-icons:matlab" width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)" />, name: "MATLAB"},
         {location: <Icon icon="simple-icons:linux" width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)" />, name: "Linux"},
         {location: <Icon icon="mdi:docker"  width="min(15vw, 6rem)" cursor="pointer" margin="min(15vw, 2rem)" color="rgb(91, 58, 255)"/>, name: "Docker"},

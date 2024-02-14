@@ -4,9 +4,9 @@ import { MapperImage } from '../../../../assets/ProjectImages';
 const Mapper = () => {
     return (
         <Project
-            title="OTFMap"
+            title="OTFMap - GIS Mapper"
             alt="OTFMap"
-            skills="C++ • GTK • Glade • EZGL • OpenStreetMap API"
+            skills="C++ (STL) • GTK • Glade • EZGL • OpenStreetMap API"
             link="https://youtu.be/OgRmhjl-Iy8"
             image={MapperImage}
         >
