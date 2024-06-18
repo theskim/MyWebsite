@@ -1,0 +1,13 @@
+$divider-width: 30%;
+
+.divider {
+  position: absolute;
+  background: linear-gradient(#fff, #fff),
+    linear-gradient(60deg, rgb(47, 168, 255), rgb(79, 84, 255));
+  padding: min(1vw, 0.5rem);
+  border-radius: 20px;
+  width: $divider-width;
+  left: calc((100% - $divider-width) / 2);
+  background-origin: content-box, padding-box;
+  background-clip: content-box, padding-box;
+}

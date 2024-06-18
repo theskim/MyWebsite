@@ -1,0 +1,114 @@
+@use "../../../variables" as *;
+
+.school-information {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  h1 {
+    display: inline-block;
+    text-align: center;
+    margin: 0 7vw 0 7vw;
+    font-family: $title-font;
+    font-size: $title-size;
+    padding-bottom: 5rem;
+    font-weight: normal;
+  }
+  h2 {
+    display: inline-block;
+    text-align: center;
+    margin: 0 7vw 0 7vw;
+    font-family: $header-font;
+    font-size: $text-size;
+    line-height: $text-height;
+  }
+  p {
+    display: inline-block;
+    text-align: center;
+    margin: 0 7vw 0 7vw;
+    font-family: $text-font;
+    font-size: $text-size;
+    line-height: $text-height;
+    margin-top: min(3rem, 9vw);
+    margin-bottom: min(2rem, 6vw);
+  }
+  img {
+    scale: (0.9);
+    width: min(40vw, 17rem);
+    padding-bottom: min(2vw, 0.5rem);
+    object-fit: contain;
+    pointer-events: none;
+  }
+  summary {
+    cursor: pointer;
+  }
+  details {
+    margin: min(3vw, 1rem);
+  }
+  .degree_table__header {
+    font-size: min(3.3vw, 1.1rem);
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th,
+  td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #333333; /* Single dark border line under each cell */
+    transition: background 0.3s ease-out;
+  }
+  th {
+    color: #ffffff;
+    font-weight: 500;
+    background: linear-gradient(to bottom, rgb(79, 84, 255), rgb(49, 53, 182));
+  }
+  th:first-child {
+    background: linear-gradient(to bottom, rgb(79, 84, 255), rgb(49, 53, 182));
+  }
+  td {
+    font-size: 14px;
+    background-color: #eeffff;
+  }
+  a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+  }
+  a:hover,
+  a:visited:hover {
+    color: #333333;
+    transition: color 0.3s ease-out;
+  }
+
+  /* Hover effect for individual table cell */
+  td:hover {
+    background-color: #d2e5fa;
+    cursor: pointer;
+  }
+}
+
+.degree_table__title {
+  transition: 1s;
+  font-family: $text-font;
+  font-size: min(3.6vw, 1.2rem);
+  border-radius: 1rem;
+}
+
+.degree_table__header {
+  transition: 1s;
+  font-family: $text-font;
+  font-size: min(3.6vw, 1.2rem);
+  border-radius: 1rem;
+}
+
+.degree_table__contents {
+  transition: 1s;
+  font-family: $text-font;
+  font-size: min(3.6vw, 1.2rem);
+  border-radius: 1rem;
+  font-size: min(3vw, 1rem);
+}

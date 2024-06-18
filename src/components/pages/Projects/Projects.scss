@@ -1,0 +1,15 @@
+@use "../../../variables" as *;
+
+.projects__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15vh 0 10vh 0;
+  h1 {
+    font-family: $title-font;
+    font-size: $title-size;
+    line-height: min(10.5vw, 5rem);
+    padding: 0 5vw;
+    font-weight: normal;
+  }
+}

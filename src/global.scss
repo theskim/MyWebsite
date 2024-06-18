@@ -1,0 +1,108 @@
+@use "./variables" as *;
+
+.App {
+  text-align: center;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "Changa One";
+  src: url("./assets/fonts/ChangaOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Bold";
+  src: url("./assets/fonts/Raleway-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Button */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+  font-weight: normal;
+  background-image: linear-gradient(90deg, rgb(85, 159, 255), rgb(91, 58, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.my-button {
+  transition: all 0.3s ease-out !important;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 4px;
+  color: #000;
+  background: transparent;
+  font-family: $text-font;
+  font-size: min(3vw, 1rem);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 8vh 0 5vh 0;
+
+  &:hover {
+    transform: scale(1.1); /* Reduced the scaling */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Modified shadow for smoother effect */
+    background-color: #000; /* Background color change */
+    border-color: #000; /* Maintain border color */
+    color: #fff; /* Text color to contrast background */
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .divider {
+    width: 50vw;
+    left: 25vw;
+  }
+}

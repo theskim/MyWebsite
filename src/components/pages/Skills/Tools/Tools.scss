@@ -1,0 +1,50 @@
+@use "../../../../variables" as *;
+
+.tools {
+  align-items: center;
+  text-align: center;
+}
+
+.tool__section {
+  margin: 0 6vh;
+}
+
+.tools-bold {
+  p {
+    display: block;
+    font-family: $header-font;
+    font-size: min(6vw, 2rem);
+    line-height: min(10vh, 3rem);
+    font-weight: normal;
+    background-image: linear-gradient(
+      90deg,
+      rgb(91, 58, 255),
+      rgb(91, 58, 255)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+}
+
+.tooltip-wrap {
+  vertical-align: top;
+  display: inline-block;
+  width: min(18vw, 7rem);
+  padding: 4vh;
+  .tooltip-content {
+    font-family: $header-font;
+    font-size: min(4vw, 1.2rem);
+    line-height: min(10vh, 2rem);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .tooltip-wrap {
+    .icon {
+      width: min(15vw, 5rem);
+    }
+  }
+}

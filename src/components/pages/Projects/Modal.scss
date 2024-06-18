@@ -1,0 +1,148 @@
+@use "../../../variables" as *;
+$modal-background: #4a448d;
+$bar-height: min(15vw, 12vh);
+$xbar-height: min(5vw, 2.5rem);
+$bar-col: #fff;
+
+.modal {
+  display: block;
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  z-index: 50;
+  background: #eeffff;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+  animation: fadeIn 0.5s ease;
+  .modal__bar {
+    position: fixed;
+    z-index: 51;
+    background: $modal-background;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $bar-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* evenly space items */
+    padding: 0 1.5rem; /* horizontal padding */
+    border-bottom: $bar-col;
+    border-bottom-style: solid;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow for depth */
+
+    .modal__xbar {
+      position: absolute; /* Absolute positioning relative to parent */
+      right: 20%; /* Positioned 20% from the right */
+      color: #eeffff; /* light modern blue color */
+      font-size: calc($header-size * 2);
+      line-height: 1rem;
+      cursor: pointer;
+      transition: color 0.3s ease; /* transition for a smoother color change */
+    }
+
+    .modal__xbar:hover {
+      color: #8cb9ed; /* light modern blue color */
+    }
+  }
+}
+
+.modal::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.modal__bar-title {
+  margin: calc(($bar-height - $header-size) / 2) 0
+    calc(($bar-height - $header-size) / 2) 10vw;
+  display: inline-block;
+  color: #eeffff;
+  font-family: $header-font;
+  font-size: $header-size;
+}
+
+.modal.fade-out {
+  animation: fadeOut 0.5s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal__contents {
+  display: flex;
+  margin: 15vh 4vw 0 4vw;
+  p {
+    color: #000;
+    text-align: left;
+    font-family: $text-font;
+    font-size: $text-size;
+    line-height: $text-height;
+  }
+  .modal__image {
+    .section-logo {
+      width: min(56vw, 30rem);
+      height: min(56vw, 30rem);
+      margin: 5vh 6vw 0 0;
+    }
+  }
+}
+
+.project-links {
+  img {
+    width: min(4vw, 2rem);
+    object-fit: contain;
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .modal__contents {
+    .modal__image {
+      .section-logo {
+        margin: auto;
+      }
+      margin: min(10vw, 5vh) 0 !important;
+    }
+    display: grid;
+    margin: min(15vw, 15vh) 1vw 0 1vw;
+    p {
+      margin: 0 min(10vw, 3rem) 3vh min(10vw, 3rem);
+    }
+  }
+  .modal {
+    .project-links {
+      display: grid !important;
+    }
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .modal__contents {
+    margin: 20vh 10vw 0 10vw;
+  }
+}

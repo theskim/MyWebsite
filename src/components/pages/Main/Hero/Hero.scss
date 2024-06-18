@@ -1,0 +1,54 @@
+@use "../../../../variables" as *;
+
+.about-me {
+  align-items: center;
+  flex-direction: column;
+  display: inline-block;
+  text-align: center;
+  padding: 15vh 0 20vh 0;
+
+  h1 {
+    display: inline-block;
+    text-align: center;
+    margin: 0 8vw;
+    font-family: $title-font;
+    font-size: 3.8rem;
+    line-height: min(17vw, 8rem);
+
+    @media screen and (min-width: 768px) {
+      font-size: calc(5rem + (10 - 5) * ((100vw - 768px) / (1200 - 768)));
+    }
+  }
+
+  .about-me-description {
+    h4 {
+      font-family: $header-font;
+      font-size: min(6vw, 1.75rem);
+      line-height: min(8vw, 3rem);
+    }
+    h5 {
+      font-family: $header-font;
+      font-size: min(5.25vw, 1.5rem);
+      line-height: min(8vw, 3rem);
+    }
+    img {
+      height: min(6.5vw, 2.5rem);
+      pointer-events: none;
+    }
+    p {
+      color: #000;
+      font-family: $text-font;
+      font-size: $text-size;
+      line-height: $text-height;
+      margin: 0 8vw 0 8vw;
+    }
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .about-me-description {
+    p {
+      margin: 0 10vw 0 10vw;
+    }
+  }
+}

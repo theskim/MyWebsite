@@ -1,0 +1,61 @@
+@use "../../variables" as *;
+$box-col: #eeffff;
+
+.background__all {
+  background: rgb(139, 117, 252);
+  background-size: 600% 100%;
+  animation: gradient 7s ease infinite;
+  animation-direction: alternate;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+.nav__suggestion {
+  display: none;
+  text-align: center;
+  background-color: $box-col;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  border-radius: min(3vh, 1rem);
+  box-shadow: 0 0 10px 16px rgba(0, 0, 3, 0.2);
+  p {
+    font-family: $text-font;
+    color: #000;
+    font-size: min(5vw, 1.5rem);
+    padding: 1rem;
+  }
+  img {
+    height: min(5vw, 1.5rem);
+    pointer-events: none;
+  }
+}
+
+.box__all {
+  padding: 1vw 1vw;
+  border-radius: 20px;
+  background-origin: content-box, padding-box;
+  background-clip: content-box, padding-box;
+  margin-top: min(10vh, 5rem);
+  background-color: $box-col;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  border-radius: min(10vh, 5rem);
+  box-shadow: 0 0 10px 16px rgba(0, 0, 3, 0.2);
+}
+
+@media screen and (max-width: 1350px) {
+  .nav__suggestion {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .nav__suggestion {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  .box__all {
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+}

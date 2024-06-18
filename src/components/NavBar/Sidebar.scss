@@ -1,0 +1,101 @@
+@use "../../variables" as *;
+$sidebar-hover-col: #ccc2ff;
+$sidebar-background: #4a448d;
+
+.side-bar {
+  display: none;
+  width: 100vw;
+  left: 0;
+  position: sticky;
+  vertical-align: middle;
+}
+
+.burger-bar {
+  position: absolute;
+  cursor: pointer;
+  width: min(9.9vw, 3.2rem);
+  height: min(9vw, 3rem);
+  right: min(21vw, 7rem);
+  top: calc(50% - min(9vw, 3rem) / 2);
+  transition: all 0.3s ease-in-out;
+  -webkit-user-drag: none;
+  &:hover {
+    transform: scale(1.15);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.side-bar-box {
+  position: absolute;
+  right: -100%;
+  top: 0%;
+  background: $sidebar-background;
+  height: calc(100vh - min(8vw, 1.5rem));
+  width: min(45vw, 20rem);
+  border-radius: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.7s cubic-bezier(0.53, -0.41, 0.55, 1.2);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.75);
+  p {
+    color: #eeffff;
+    padding: min(4vh, 2rem);
+    padding-right: 100%;
+    margin-bottom: 0;
+    text-decoration: none;
+    font-family: $text-font;
+    font-size: min(4.5vw, 1.5rem);
+    scroll-behavior: smooth;
+    transition: all 0.7s ease-in-out;
+  }
+  .nav-link {
+    p {
+      &:hover {
+        background-color: $sidebar-hover-col;
+        color: #000000;
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}
+
+.side-bar-box__activate {
+  position: absolute;
+  right: -100%;
+  top: 0%;
+  background: $sidebar-background;
+  height: calc(100vh - min(8vw, 1.5rem));
+  width: min(45vw, 20rem);
+  border-radius: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.75);
+  right: 0%;
+  top: 0%;
+  transition: all 0.7s cubic-bezier(0.53, -0.41, 0.55, 1.2);
+  p {
+    color: #eeffff;
+    padding: min(4vh, 1.5rem);
+    padding-right: 100%;
+    margin-bottom: 0;
+    text-decoration: none;
+    font-family: $text-font;
+    font-size: min(4.5vw, 1.5rem);
+    scroll-behavior: smooth;
+    transition: all 0.7s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $sidebar-hover-col;
+      color: #000000;
+      text-decoration: none;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .side-bar {
+    display: flex;
+  }
+}

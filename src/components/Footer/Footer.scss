@@ -1,0 +1,21 @@
+@use "../../variables" as *;
+$footer-col: #fff;
+$footer-background: linear-gradient(90deg, rgb(45, 102, 176), rgb(58, 38, 162));
+
+.footer {
+  background: $footer-background;
+  border-top: $footer-col;
+  border-top-style: solid;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $footer-col;
+    font-size: calc(
+      1rem + 0.3vw
+    ); // Combination of relative unit and viewport unit
+    font-family: $text-font;
+    text-align: center;
+  }
+}

@@ -1,0 +1,14 @@
+@use "../../../variables" as *;
+
+.skills__title {
+  h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: $title-font;
+    padding: 7vh 0 7vh 0;
+    font-size: $title-size;
+    line-height: min(10.5vw, 5rem);
+    font-weight: normal;
+  }
+}
